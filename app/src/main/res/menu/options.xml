@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Copy link"
+        android:id="@+id/copy"/>
+    <item
+        android:title="Delete post"
+        android:id="@+id/delete"/>
+    <item
+        android:title="Unfollow"
+        android:id="@+id/unfollow"/>
+    <item
+        android:title="Report"
+        android:id="@+id/report"/>
+
+
+</menu>

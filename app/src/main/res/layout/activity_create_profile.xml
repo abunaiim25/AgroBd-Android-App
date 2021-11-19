@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/createProfile"
+    tools:context=".CreateProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bar"
+        android:background="?android:attr/windowBackground"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:background="?android:attr/windowBackground"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--
+                            <ImageView
+                                android:id="@+id/backButton"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_baseline_arrow_back_24"/>
+                -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Edit Profile"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel_profile"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            app:cardPreventCornerOverlap="false"
+            app:cardCornerRadius="75dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/profile_image"
+                android:src="@drawable/profile_image"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_below="@id/rel_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mid"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="username"
+            android:textSize="17dp"
+            android:id="@+id/username"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:paddingStart="5dp"
+            android:drawablePadding="7dp"
+            android:layout_margin="4dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="profession"
+            android:textSize="17dp"
+            android:id="@+id/profession"
+            android:drawableStart="@drawable/ic_baseline_work_24"
+            android:paddingStart="5dp"
+            android:drawablePadding="7dp"
+            android:layout_margin="4dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="contact number"
+            android:textSize="17dp"
+            android:id="@+id/number"
+            android:drawableStart="@drawable/ic_baseline_local_phone_24"
+            android:paddingStart="5dp"
+            android:drawablePadding="7dp"
+            android:layout_margin="4dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="address"
+            android:textSize="17dp"
+            android:id="@+id/address"
+            android:drawableStart="@drawable/ic_baseline_add_location_alt_24"
+            android:paddingStart="5dp"
+            android:drawablePadding="7dp"
+            android:layout_margin="4dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="bio"
+            android:id="@+id/bio"
+            android:textSize="17dp"
+            android:layout_margin="4dp"
+            android:drawableStart="@drawable/ic_baseline_hail_24"
+            android:paddingStart="5dp"
+            android:drawablePadding="7dp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_below="@id/mid"
+        android:layout_above="@id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_margin="15dp"
+            android:id="@+id/edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:text="Edit Profile"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

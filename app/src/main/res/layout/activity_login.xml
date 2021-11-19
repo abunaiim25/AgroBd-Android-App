@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".LoginActivity">
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:text="Welcome"
+        android:textColor="@color/main_color"
+        android:textSize="30dp"
+        android:layout_marginBottom="-10dp"/>
+
+    <TextView
+        android:layout_below="@id/welcome"
+        android:id="@+id/loginTextId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login to your new shop AgroBd"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/loginTextId"
+        android:layout_above="@id/linear"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/farmer"
+            android:src="@drawable/farmer"/>
+
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:hint="email"
+            android:inputType="textEmailAddress"
+            android:textSize="17dp"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="20dp"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:textSize="17dp"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:padding="10dp"
+            android:drawablePadding="20dp"/>
+
+        <CheckBox
+            android:textSize="10dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="3dp"
+            android:text="Show Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox"
+            />
+
+
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:text="Login"/>
+
+        <TextView
+            android:id="@+id/loginToRegister"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:text="New User? Registration"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
